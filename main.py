@@ -4,12 +4,12 @@ from fastapi import Depends, FastAPI
 from pydantic import BaseModel
 from deep_translator import GoogleTranslator
 def model(text:str):
-    translated_text = GoogleTranslator(source='kn', target='en').translate(text)
-    return translated_text
+    modified_text = GoogleTranslator(source='kn', target='en').translate(text)
+    return modified_text
 
 def modell(word:str):
-    translated_text = GoogleTranslator(source='en', target='kn').translate(word)
-    return translated_text
+    modified_text = GoogleTranslator(source='en', target='kn').translate(word)
+    return modified_text
   
 app = FastAPI()
 
