@@ -15,7 +15,7 @@ app = FastAPI()
 
 # Load sentiment analysis model
 nlp = pipeline(task='sentiment-analysis',
-               model='nlptown/bert-base-multilingual-uncased-sentiment')
+               model='google/muril-base-cased')
 
 class SentimentRequest(BaseModel):
     text: str
